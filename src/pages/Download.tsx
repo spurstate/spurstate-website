@@ -35,7 +35,7 @@ export default function Download() {
   const [assets, setAssets] = useState<ReleaseAssets>({ mac: null, macSize: null, windows: null, windowsSize: null, version: null })
 
   useEffect(() => {
-    fetch(`https://api.github.com/repos/${import.meta.env.VITE_GITHUB_RELEASES_REPO}/releases/latest`)
+    fetch('/.netlify/functions/releases')
       .then((r) => r.json())
       .then((data) => {
         const macAsset = data.assets?.find((a: { name: string }) => a.name.endsWith('.dmg'))
