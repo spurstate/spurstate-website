@@ -49,7 +49,7 @@ export default function About() {
       {/* Hero */}
       <section className="relative bg-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-white pointer-events-none" />
-        <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-36 md:pt-32 md:pb-44">
+        <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-48 md:pt-32 md:pb-60">
           <div className="max-w-3xl">
             <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-4">Our mission</p>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-950 leading-tight tracking-tight mb-6">

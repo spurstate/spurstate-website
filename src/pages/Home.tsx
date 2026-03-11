@@ -42,7 +42,7 @@ export default function Home() {
     <div className="pt-16">
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-white">
-        <div className="max-w-6xl mx-auto px-6 pt-24 pb-36 md:pt-32 md:pb-44 w-full">
+        <div className="max-w-6xl mx-auto px-6 pt-24 pb-48 md:pt-32 md:pb-60 w-full">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 bg-white text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-8 border border-blue-100 shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
