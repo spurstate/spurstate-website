@@ -17,9 +17,9 @@ export default function Contact() {
     e.preventDefault()
     setFormState('sending')
     try {
-      await fetch(import.meta.env.VITE_N8N_WEBHOOK_URL, {
+      await fetch('/.netlify/functions/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Auth-Token': import.meta.env.VITE_WEBSITE_HEADER_TOKEN },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       })
       setFormState('sent')
