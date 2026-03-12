@@ -23,7 +23,7 @@ const steps = [
 ]
 
 const included = [
-  'Lesson plan generator (NZ Curriculum-aligned)',
+  'Lesson plan generator (New Zealand Curriculum-aligned)',
   'Unit plan generator',
   'Report comment generator',
   'Bring your own curriculum documents',
@@ -79,7 +79,7 @@ export default function Download() {
             Download Workdesk
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-            A desktop app for NZ teachers. Lesson plans, unit plans, and report comments — generated in seconds, built around the NZ Curriculum.
+            A desktop app for teachers. Lesson plans, unit plans, and report comments — generated in seconds, built around the New Zealand Curriculum.
           </p>
         </div>
       </section>
@@ -176,7 +176,7 @@ export default function Download() {
                 Everything in one app.
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                Workdesk includes every tool a NZ teacher needs for documentation — all in one desktop app, all offline, all private.
+                Workdesk includes every tool a teacher needs for documentation — all in one desktop app, all offline, all private.
               </p>
             </div>
             <ul className="space-y-3">

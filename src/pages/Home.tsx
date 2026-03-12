@@ -53,7 +53,7 @@ export default function Home() {
               <span className="text-blue-600">for the rest of us.</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              Spurstate helps NZ businesses adopt AI — so they can move faster, work smarter, and do more with less.
+              Spurstate helps New Zealand businesses adopt AI — so they can move faster, work smarter, and do more with less.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -94,7 +94,7 @@ export default function Home() {
                 We work directly<br />with your business.
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Spurstate is an AI solutions company. We work with NZ businesses, sole traders, and professionals who know AI is important but haven't had the time — or the right guidance — to make it work for them.
+                Spurstate is an AI solutions company. We work with NZ businesses, sole traders, and professionals who know AI is important but they haven't had the time — or the right guidance — to make it work for them.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 We build systems that keep working after the engagement ends. That's what makes us different.

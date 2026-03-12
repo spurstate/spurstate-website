@@ -19,7 +19,7 @@ const values = [
   },
   {
     icon: Globe,
-    title: 'NZ-first',
+    title: 'New Zealand-first',
     description: 'We\'re based in Auckland and we build for New Zealand. That means understanding local context, local curriculum, and local business realities.',
   },
 ]
@@ -27,7 +27,7 @@ const values = [
 const timeline = [
   {
     title: 'The observation',
-    description: 'NZ businesses and professionals were being left behind by the AI adoption wave. The tools existed — but they weren\'t built for them.',
+    description: 'New Zealand businesses and professionals feeling left behind by the AI adoption wave. The tools existed — but they weren\'t built for them.',
   },
   {
     title: 'The decision',
@@ -39,7 +39,7 @@ const timeline = [
   },
   {
     title: 'What\'s next',
-    description: 'Workdesk is just the start. Spurstate is building a suite of AI tools for different NZ professional contexts — all with the same philosophy: useful by default, not useful eventually.',
+    description: 'Workdesk is just the start. Spurstate is building a suite of AI tools for different New Zealand professional contexts — all with the same philosophy: useful by default, not useful eventually.',
   },
 ]
 
@@ -53,7 +53,7 @@ export default function About() {
           <div className="max-w-3xl">
             <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-4">Our mission</p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-950 leading-tight tracking-tight mb-6">
-              Spurstate helps NZ businesses move faster with AI —<br className="hidden sm:block" />
+              Spurstate helps<br />New Zealand businesses move faster with AI —<br className="hidden sm:block" />
               <span className="text-blue-600">one goal at a time.</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
@@ -91,7 +91,7 @@ export default function About() {
                 AI is changing the way businesses operate. The good news is you don't need to understand it deeply to benefit from it — you just need the right support to get started.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Spurstate exists to be that support for NZ businesses and professionals. Not by overwhelming them with tools, but by giving them exactly what they need to move forward.
+                Spurstate exists to be that support for New Zealand businesses and professionals. Not by overwhelming them with tools, but by giving them exactly what they need to move forward.
               </p>
             </div>
             <div className="relative pl-8">
@@ -147,9 +147,9 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="rounded-2xl bg-blue-50 border border-blue-100 p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">NZ Businesses</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">New Zealand Businesses</h3>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Local business owners and sole traders who know AI is important, but haven't had time — or the right guidance — to make it work for them. We build systems that are practical, immediate, and actually useful.
+                Local business owners and sole traders who know AI is important, but they haven't had time — or the right guidance — to make it work for them. We build systems that are practical, immediate, and actually useful.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 {['AI workflows that save real hours', 'Tools implemented and working within days', 'More output without more headcount', 'Systems that keep delivering after we\'re done'].map((item, i) => (
@@ -161,7 +161,7 @@ export default function About() {
               </ul>
             </div>
             <div className="rounded-2xl bg-gray-50 border border-gray-200 p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">NZ Teachers</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">New Zealand Teachers</h3>
               <p className="text-gray-600 leading-relaxed mb-5">
                 Primary and secondary teachers who spend more time on documentation than they should. Workdesk is built specifically for them — around the NZ Curriculum, their school, their class, their way of working.
               </p>

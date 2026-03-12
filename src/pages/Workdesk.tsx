@@ -212,7 +212,7 @@ export default function Workdesk() {
               <span className="text-blue-600">Now it takes two.</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
-              Workdesk is a desktop app for NZ teachers. Lesson plans, unit plans, and report comments — generated in seconds, built around the NZ Curriculum, personalised to your school, environment and class.
+              Workdesk is a desktop app for teachers. Lesson plans, unit plans, and report comments — generated in seconds, built around the New Zealand Curriculum, personalised to your school, environment and class.
             </p>
             <div className="flex flex-col gap-3">
               <div className="flex flex-wrap gap-4">
