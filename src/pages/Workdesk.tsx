@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import {
-  FileText, BookOpen, MessageSquare, Upload, Settings, FolderOpen, Download, Shield, Moon, ArrowRight, Check, X as XIcon, ChevronDown, ChevronUp
+  FileText, BookOpen, MessageSquare, Upload, Settings, FolderOpen, Download, Shield, Moon, ArrowRight, Check, X as XIcon, ChevronDown, ChevronUp, Play, FileDown
 } from 'lucide-react'
 import { useState } from 'react'
+import AppTourModal from '../components/AppTourModal'
 
 const stats = [
   { value: '47.5', label: 'hrs/week', sub: 'Average NZ teacher workload — 2nd in OECD' },
@@ -113,9 +114,30 @@ function FAQ({ q, a }: { q: string; a: string }) {
   )
 }
 
+const curriculumFiles: { title: string; description: string; url: string | null }[] = [
+  // Add curriculum files here when ready, e.g.:
+  // { title: 'English — Year 1–4', description: 'NZ Curriculum English learning areas, Years 1–4', url: 'https://...' },
+]
+
 export default function Workdesk() {
+  const [tourOpen, setTourOpen] = useState(false)
+  const [tourStep, setTourStep] = useState(0)
+
+  const openTour = () => { setTourStep(0); setTourOpen(true) }
+  const closeTour = () => setTourOpen(false)
+  const nextStep = () => setTourStep(s => Math.min(s + 1, 7))
+  const prevStep = () => setTourStep(s => Math.max(s - 1, 0))
+
   return (
     <div className="pt-16">
+      <AppTourModal
+        isOpen={tourOpen}
+        step={tourStep}
+        onClose={closeTour}
+        onNext={nextStep}
+        onPrev={prevStep}
+        onSetStep={setTourStep}
+      />
       {/* Hero */}
       <section className="relative bg-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-white pointer-events-none" />
@@ -123,32 +145,41 @@ export default function Workdesk() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-8 border border-green-100">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-              Free Beta — Mac & Windows
+              Free Beta — Windows & Mac
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-950 leading-tight tracking-tight mb-6">
-              Report writing used to take 20 hours.<br />
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-950 leading-tight tracking-tight mb-6">
+              Report writing used to take 20 hours.<br className="hidden sm:block" />
               <span className="text-blue-600">Now it takes two.</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
-              Workdesk is a desktop app for NZ teachers. Lesson plans, unit plans, and report comments — generated in seconds, built around the NZ Curriculum, personalised to your school and class.
+              Workdesk is a desktop app for NZ teachers. Lesson plans, unit plans, and report comments — generated in seconds, built around the NZ Curriculum, personalised to your school, environment and class.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Apply for beta access
-                <ArrowRight size={16} />
-              </Link>
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-wrap gap-4">
+                <button
+                  onClick={openTour}
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  <Play size={15} />
+                  See how it works
+                </button>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-blue-200 text-blue-600 font-semibold hover:bg-blue-50 hover:border-blue-300 transition-colors"
+                >
+                  Apply for beta access
+                </Link>
+              </div>
               <a
                 href="#features"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 hover:border-gray-300 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 hover:border-gray-300 transition-colors self-start"
               >
                 See all features
+                <ArrowRight size={14} />
               </a>
             </div>
             <p className="mt-5 text-sm text-gray-400">
-              Seeking 5 Auckland primary school teachers as beta testers. Spurstate covers all API costs during the trial.
+              Seeking a small group of Auckland primary school teachers as beta testers. Spurstate covers all API costs during the trial.
             </p>
           </div>
         </div>
@@ -167,11 +198,11 @@ export default function Workdesk() {
               <div key={i} className="border-l-2 border-blue-400 pl-5">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-1">{s.value}</div>
                 <div className="text-blue-300 text-sm font-semibold mb-1">{s.label}</div>
-                <div className="text-blue-500 text-xs leading-relaxed">{s.sub}</div>
+                <div className="text-blue-500 text-sm leading-relaxed">{s.sub}</div>
               </div>
             ))}
           </div>
-          <p className="text-blue-800 text-xs mt-8">Source: OECD Teaching and Learning International Survey, NZ Ministry of Education data.</p>
+          <p className="text-white-800 text-sm mt-8">Source: OECD Teaching and Learning International Survey, NZ Ministry of Education data.</p>
         </div>
       </section>
 
@@ -226,14 +257,14 @@ export default function Workdesk() {
                 {comparison.map((row, i) => (
                   <tr key={i} className="bg-white">
                     <td className="py-4 px-6 text-sm font-medium text-gray-700">{row.feature}</td>
-                    <td className="py-4 px-6 text-center">
-                      <div className="flex items-start gap-2 justify-center">
+                    <td className="py-4 px-6">
+                      <div className="flex items-start gap-2">
                         <XIcon size={16} className="text-red-400 mt-0.5 shrink-0" />
                         <span className="text-sm text-gray-500">{row.generic}</span>
                       </div>
                     </td>
                     <td className="py-4 px-6 bg-blue-50/50">
-                      <div className="flex items-start gap-2 justify-center">
+                      <div className="flex items-start gap-2">
                         <Check size={16} className="text-blue-600 mt-0.5 shrink-0" />
                         <span className="text-sm text-gray-700 font-medium">{row.workdesk}</span>
                       </div>
@@ -274,15 +305,66 @@ export default function Workdesk() {
         </div>
       </section>
 
+      {/* Curriculum downloads */}
+      <section className="bg-white py-24 border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="max-w-2xl mb-14">
+            <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-3">Curriculum Resources</p>
+            <h2 className="text-4xl font-bold text-gray-950 leading-tight mb-4">
+              Download curriculum files for Workdesk.
+            </h2>
+            <p className="text-lg text-gray-600">
+              Upload these into Workdesk to give it the context of the NZ Curriculum. Choose the files relevant to your year level and learning area.
+            </p>
+          </div>
+
+          {curriculumFiles.length === 0 ? (
+            <div className="rounded-2xl border border-dashed border-gray-200 bg-gray-50 p-12 flex flex-col items-center justify-center text-center max-w-md">
+              <div className="w-12 h-12 rounded-2xl bg-gray-100 flex items-center justify-center mb-4">
+                <FileDown size={22} className="text-gray-400" />
+              </div>
+              <p className="font-semibold text-gray-500 mb-1">Curriculum files coming soon</p>
+              <p className="text-sm text-gray-400 leading-relaxed">We'll notify beta testers when they're available to download.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {curriculumFiles.map((file, i) => (
+                <div key={i} className="rounded-2xl border border-gray-200 p-6 hover:border-blue-200 hover:shadow-sm transition-all flex flex-col gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+                    <FileDown size={18} className="text-blue-600" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-bold text-gray-900 mb-1">{file.title}</h3>
+                    <p className="text-sm text-gray-500 leading-relaxed">{file.description}</p>
+                  </div>
+                  {file.url ? (
+                    <a
+                      href={file.url}
+                      download
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors self-start"
+                    >
+                      <Download size={14} />
+                      Download
+                    </a>
+                  ) : (
+                    <span className="text-xs text-gray-400 font-medium">Coming soon</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
       {/* Beta CTA */}
       <section className="bg-blue-600 py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            It knows your school. Your year level.<br />Your term priorities.
+            It knows your school. Your year level.<br className="hidden sm:block" />Your term priorities.
           </h2>
           <p className="text-blue-100 text-xl mb-4">Not a generic answer — yours.</p>
           <p className="text-blue-200 text-sm mb-10">
-            We're looking for 5 Auckland primary school teachers for our free beta. Spurstate covers all API costs during the trial.
+            We're looking for a small group of Auckland primary school teachers for our free beta. Spurstate covers all API costs during the trial.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link

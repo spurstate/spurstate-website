@@ -27,7 +27,7 @@ const values = [
 const timeline = [
   {
     title: 'The observation',
-    description: 'NZ small businesses and professionals were being left behind by the AI adoption wave. The tools existed — but they weren\'t built for them.',
+    description: 'NZ businesses and professionals were being left behind by the AI adoption wave. The tools existed — but they weren\'t built for them.',
   },
   {
     title: 'The decision',
@@ -52,9 +52,9 @@ export default function About() {
         <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-48 md:pt-32 md:pb-60">
           <div className="max-w-3xl">
             <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-4">Our mission</p>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-950 leading-tight tracking-tight mb-6">
-              Spurstate brings the modern era of AI to NZ small businesses —<br />
-              <span className="text-blue-600">before the window closes.</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-950 leading-tight tracking-tight mb-6">
+              Spurstate helps NZ businesses move faster with AI —<br className="hidden sm:block" />
+              <span className="text-blue-600">one goal at a time.</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
               We work with local business owners, sole traders, and professionals who are time-poor, tech-sceptical, and have been left behind by the AI adoption trends everyone keeps talking about.
@@ -71,7 +71,7 @@ export default function About() {
         />
         <div className="relative max-w-4xl mx-auto px-6 text-center">
           <blockquote className="text-3xl md:text-4xl font-bold text-white leading-snug mb-6">
-            "You don't need to understand how AI works.<br />
+            "You don't need to understand how AI works.<br className="hidden sm:block" />
             You need to know what it can do for you."
           </blockquote>
           <p className="text-blue-300 text-lg">That's what Spurstate is here to show you.</p>
@@ -85,13 +85,13 @@ export default function About() {
             <div>
               <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-3">How we got here</p>
               <h2 className="text-4xl font-bold text-gray-950 leading-tight mb-6">
-                The window won't be open forever.
+                Getting started is easier than you think.
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                AI adoption is accelerating. Businesses that move now will have a structural advantage over those that don't — and that gap is widening every month.
+                AI is changing the way businesses operate. The good news is you don't need to understand it deeply to benefit from it — you just need the right support to get started.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Spurstate exists to make sure NZ small businesses and professionals are on the right side of that line. Not by overwhelming them with tools, but by giving them exactly what they need to move forward.
+                Spurstate exists to be that support for NZ businesses and professionals. Not by overwhelming them with tools, but by giving them exactly what they need to move forward.
               </p>
             </div>
             <div className="relative pl-8">
@@ -147,7 +147,7 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="rounded-2xl bg-blue-50 border border-blue-100 p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">NZ Small Businesses</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">NZ Businesses</h3>
               <p className="text-gray-600 leading-relaxed mb-5">
                 Local business owners and sole traders who know AI is important, but haven't had time — or the right guidance — to make it work for them. We build systems that are practical, immediate, and actually useful.
               </p>

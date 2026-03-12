@@ -40,19 +40,39 @@ export default function Contact() {
         <div className="relative max-w-6xl mx-auto px-6 py-24 md:py-32">
           <div className="max-w-2xl">
             <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-4">Get in touch</p>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-950 leading-tight tracking-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-950 leading-tight tracking-tight mb-6">
               Let's talk about<br />
               <span className="text-blue-600">what's possible.</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Whether you're a teacher curious about Workdesk, a business owner wondering what AI could do for you, or just want to say hello — we'd love to hear from you.
+              Whether you're a teacher curious about Workdesk, a business owner wondering what AI could do for you, or just want to say hello — I'd love to hear from you.
             </p>
           </div>
         </div>
       </section>
 
+      {/* Founder bio */}
+      <section className="bg-gray-50 py-14 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+            <img
+              src="/assets/mitch-profile_pic.png"
+              alt="Mitch Wilson — Founder, Spurstate"
+              className="w-40 h-40 sm:w-64 sm:h-64 rounded-full object-cover object-top ring-2 ring-blue-100 shrink-0"
+            />
+            <div className="text-center sm:text-left">
+              <p className="text-blue-600 text-xs font-semibold uppercase tracking-widest mb-1">Founder</p>
+              <h2 className="text-xl font-bold text-gray-950 mb-2">Mitch Wilson</h2>
+              <p className="text-gray-600 text-sm leading-relaxed max-w-xl">
+                I'm Mitch Wilson, a developer based in Auckland. AI is changing the way work gets done — but most of that change is happening without NZ businesses. I started Spurstate to close that gap: helping people understand what AI can actually do for them, and building tools that make it practical to use.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Content */}
-      <section className="bg-white py-16">
+      <section className="bg-white py-16 pb-32">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
             {/* Info */}
@@ -93,7 +113,7 @@ export default function Contact() {
               <div className="mt-12 p-6 rounded-2xl bg-blue-50 border border-blue-100">
                 <h3 className="font-bold text-gray-900 mb-2">Applying for Workdesk beta?</h3>
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                  We're looking for 5 Auckland primary school teachers. Free access, API costs covered by Spurstate. Just use Workdesk in your actual teaching practice and give us honest feedback.
+                  We're looking for a small group of Auckland primary school teachers. Free access, API costs covered by Spurstate. Just use Workdesk in your actual teaching practice and give us honest feedback.
                 </p>
                 <div className="flex flex-col gap-2 text-sm text-gray-600">
                   {['Free during beta period', 'Mac & Windows supported', 'Direct input into product direction', 'No technical knowledge needed'].map((item, i) => (

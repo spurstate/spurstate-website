@@ -33,7 +33,7 @@ const differentiators = [
   {
     icon: Users,
     title: 'Built for NZ businesses',
-    description: 'We\'re based in Auckland. We understand the local market, local customers, and the realities of running a small business here.',
+    description: 'We\'re based in Auckland. We understand the local market, local customers, and the realities of running a business here.',
   },
 ]
 
@@ -48,12 +48,12 @@ export default function Home() {
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
               AI Solutions — Auckland, New Zealand
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-950 leading-[1.05] tracking-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-950 leading-[1.05] tracking-tight mb-6">
               AI tools that work<br />
               <span className="text-blue-600">for the rest of us.</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              Spurstate helps NZ small businesses adopt AI — so they can move faster, work smarter, and do more with less.
+              Spurstate helps NZ businesses adopt AI — so they can move faster, work smarter, and do more with less.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -78,7 +78,7 @@ export default function Home() {
       <section className="bg-blue-950 text-white py-28 md:py-32">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-2xl md:text-3xl font-semibold text-white leading-snug">
-            "Most small businesses are still doing things the slow way.<br className="hidden md:block" />
+            "Most businesses are still doing things the slow way. <br className="hidden md:block" />
             We show them what's possible — and set them up to actually use it."
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function Home() {
                 We work directly<br />with your business.
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Spurstate is an AI solutions company. We work with NZ small businesses, sole traders, and professionals who know AI is important but haven't had the time — or the right guidance — to make it work for them.
+                Spurstate is an AI solutions company. We work with NZ businesses, sole traders, and professionals who know AI is important but haven't had the time — or the right guidance — to make it work for them.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 We build systems that keep working after the engagement ends. That's what makes us different.
@@ -196,7 +196,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="rounded-2xl bg-blue-900/60 border border-blue-800 p-8">
-              <h3 className="text-xl font-bold text-white mb-3">Small business owners</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Business owners</h3>
               <p className="text-blue-200 leading-relaxed mb-5 text-sm">
                 You're running a business. You don't have time to become an AI expert. We come in, assess what you need, and implement it. You get the results without the learning curve.
               </p>
