@@ -16,7 +16,7 @@ const features = [
   {
     icon: FileText,
     title: 'Lesson Plan Generation',
-    description: 'Fill a short form — topic, year level, learning area, duration. Get a complete, NZ Curriculum-aligned lesson plan in seconds. Includes learning intentions, success criteria, timing, differentiation strategies, and cultural responsiveness notes.',
+    description: 'Fill in a short form — topic, year level, learning area, duration. Get a complete, NZ Curriculum-aligned lesson plan in seconds. Includes learning intentions, success criteria, timing, differentiation strategies, and cultural responsiveness notes.',
   },
   {
     icon: BookOpen,
@@ -66,7 +66,7 @@ const features = [
 ]
 
 const comparison = [
-  { feature: 'Learning curve', generic: 'Requires expert prompting', workdesk: 'Fill a form, click generate' },
+  { feature: 'Learning curve', generic: 'Requires expert prompting', workdesk: 'Fill in a form, click generate' },
   { feature: 'Curriculum focus', generic: 'Generic, not NZ-specific', workdesk: 'Built around NZ Curriculum — objectives, key competencies, conventions' },
   { feature: 'File management', generic: 'Copy-paste and format manually', workdesk: 'Documents saved and organised automatically' },
   { feature: 'Personalisation', generic: 'No memory, generic every time', workdesk: 'Remembers your school, class, and term priorities' },
@@ -212,10 +212,10 @@ export default function Workdesk() {
           <div className="max-w-2xl mb-14">
             <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-3">Features</p>
             <h2 className="text-4xl font-bold text-gray-950 leading-tight mb-4">
-              Everything a NZ teacher needs.
+              Everything a teacher in New Zealand needs.
             </h2>
             <p className="text-lg text-gray-600">
-              Download it. Fill a form. Get your lesson plan. That's it.
+              Download it. Fill in a form. Get your lesson plan. That's it.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

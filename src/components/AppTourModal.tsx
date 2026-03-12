@@ -20,7 +20,7 @@ const tourSteps = [
   },
   {
     title: 'Generate a lesson plan',
-    description: 'Fill a short form — topic, year level, learning area, duration. Workdesk handles the rest, building a complete NZ Curriculum-aligned plan.',
+    description: 'Fill in a short form — topic, year level, learning area, duration. Workdesk handles the rest, building a complete NZ Curriculum-aligned plan.',
     image: '/assets/application_tour/generate_lesson_plan.png',
   },
   {

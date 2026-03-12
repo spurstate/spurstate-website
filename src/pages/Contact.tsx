@@ -64,7 +64,7 @@ export default function Contact() {
               <p className="text-blue-600 text-xs font-semibold uppercase tracking-widest mb-1">Founder</p>
               <h2 className="text-xl font-bold text-gray-950 mb-2">Mitch Wilson</h2>
               <p className="text-gray-600 text-sm leading-relaxed max-w-xl">
-                I'm Mitch Wilson, a developer based in Auckland. AI is changing the way work gets done — but most of that change is happening without NZ businesses. I started Spurstate to close that gap: helping people understand what AI can actually do for them, and building tools that make it practical to use.
+                I'm Mitch Wilson, a developer based in Auckland. AI is changing the way work gets done — but most of that change is happening without New Zealand businesses. I started Spurstate to close that gap: helping people understand what AI can actually do for them, and building tools that make it practical to use.
               </p>
             </div>
           </div>
