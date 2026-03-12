@@ -25,7 +25,7 @@ const tourSteps = [
   },
   {
     title: 'Your completed lesson plan',
-    description: 'In seconds, you have a full lesson plan with learning intentions, success criteria, timing, differentiation strategies, and cultural responsiveness notes.',
+    description: 'From a very simple generated prompt, you have a full lesson plan with learning intentions, success criteria, timing, differentiation strategies, and cultural responsiveness notes.',
     image: '/assets/application_tour/generated_lesson_plan_report.png',
   },
   {

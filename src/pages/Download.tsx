@@ -29,7 +29,7 @@ const included = [
   'Bring your own curriculum documents',
   'Generated resources library',
   'Full chat interface with Claude AI',
-  'Export to Markdown / Google Docs / Notion',
+  'Export to Word (.docx) — opens in Microsoft Word or Google Docs',
   'Light & dark mode',
 ]
 
@@ -137,7 +137,7 @@ export default function Download() {
               <p className="text-sm text-gray-600 leading-relaxed">
                 Workdesk is currently in beta and we're looking for a small group of Auckland primary school teachers to try it. Access is free and Spurstate covers all AI processing costs during the trial period.{' '}
                 <Link to="/contact" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
-                  Apply for beta access →
+                  <br />Apply for beta access →
                 </Link>
               </p>
             </div>

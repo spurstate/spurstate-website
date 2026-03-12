@@ -46,7 +46,7 @@ const features = [
   {
     icon: Download,
     title: 'Export to Your Computer',
-    description: 'Save any document in one click as Markdown (.md). Readable in any text editor, Google Docs, or Notion.',
+    description: 'Save any document in one click as a Word file (.docx). Opens directly in Microsoft Word, Google Docs, or any compatible editor — ready to use immediately.',
   },
   {
     icon: MessageSquare,
