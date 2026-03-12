@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <img src="/assets/logo.png" alt="Spurstate" className="h-14 w-auto self-start" />
-            <p className="text-sm leading-relaxed mb-4">
+            <p className="text-sm leading-relaxed mb-8">
               AI tools that work for the rest of us.
             </p>
             <div className="flex items-center gap-2 text-sm">

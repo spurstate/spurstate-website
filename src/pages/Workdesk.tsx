@@ -114,10 +114,70 @@ function FAQ({ q, a }: { q: string; a: string }) {
   )
 }
 
-const curriculumFiles: { title: string; description: string; url: string | null }[] = [
-  // Add curriculum files here when ready, e.g.:
-  // { title: 'English — Year 1–4', description: 'NZ Curriculum English learning areas, Years 1–4', url: 'https://...' },
+const curriculumSubjects = [
+  {
+    subject: 'English',
+    files: [
+      { year: 'Full Yr 0–10', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/english/English\u2013Yr0-10-Oct-2025.md' },
+      { year: 'Yr 0–1', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/english/English-Yr0-1-Teaching-Sequence-.md' },
+      { year: 'Yr 2', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/english/English-Yr2-Teaching-Sequence-.md' },
+      { year: 'Yr 3', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/english/English-Yr3-Teaching-Sequence-.md' },
+      { year: 'Yr 4', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/english/English-Yr4-Teaching-Sequence-.md' },
+      { year: 'Yr 5', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/english/English-Yr5-Teaching-Sequence-.md' },
+      { year: 'Yr 6', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/english/English-Yr6-Teaching-Sequence-.md' },
+      { year: 'Yr 7', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/english/English\u2013Yr7-Teaching-Sequence-.md' },
+      { year: 'Yr 8', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/english/English-Yr8-Teaching-Sequence-.md' },
+      { year: 'Yr 9', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/english/English-Yr9-Teaching-Sequence-.md' },
+      { year: 'Yr 10', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/english/English-Yr10-Teaching-Sequence-.md' },
+    ],
+  },
+  {
+    subject: 'Mathematics & Statistics',
+    files: [
+      { year: 'Full Yr 0–10', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/maths/Mathematics\u2013and\u2013Statistics-Yr0-10.md' },
+      { year: 'Yr 0–1', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/maths/Mathematics-and-Statistics-Yr0-1-Teaching-Sequence-.md' },
+      { year: 'Yr 2', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/maths/Mathematics-and-Statistics-Yr-2-Teaching-Sequence-.md' },
+      { year: 'Yr 3', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/maths/Mathematics-and-Statistics-Yr-3-Teaching-Sequence-.md' },
+      { year: 'Yr 4', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/maths/Mathematics-and-Statistics-Yr-4-Teaching-Sequence-.md' },
+      { year: 'Yr 5', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/maths/Mathematics-and-Statistics\u2013Yr-5-Teaching-Sequence-.md' },
+      { year: 'Yr 6', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/maths/Mathematics-and-Statistics-Yr-6-Teaching-Sequence-.md' },
+      { year: 'Yr 7', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/maths/Mathematics-and-Statistics\u2013Yr-7-Teaching-Sequence-.md' },
+      { year: 'Yr 8', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/maths/Mathematics-and-Statistics-Yr-8-Teaching-Sequence-.md' },
+      { year: 'Yr 9', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/maths/Mathematics-and-Statistics-Yr-9-Teaching-Sequence-.md' },
+      { year: 'Yr 10', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/maths/Mathematics-and-Statistics-Yr-10-Teaching-Sequence-.md' },
+    ],
+  },
+  {
+    subject: 'Science',
+    files: [
+      { year: 'Full Yr 0–10', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/science/Science-Draft-Yr0-10-Oct--2025.md' },
+      { year: 'Yr 1', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/science/Science-Yr-1-teaching-sequence.md' },
+      { year: 'Yr 2', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/science/Science-Yr-2-teaching-sequence.md' },
+      { year: 'Yr 3', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/science/Science-Yr-3-teaching-sequence.md' },
+      { year: 'Yr 4', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/science/Science-Yr-4-teaching-sequence.md' },
+      { year: 'Yr 5', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/science/Science-Yr-5-teaching-sequence.md' },
+      { year: 'Yr 6', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/science/Science-Yr-6-teaching-sequence.md' },
+      { year: 'Yr 7', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/science/Science-Yr-7-teaching-sequence.md' },
+      { year: 'Yr 8', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/science/Science-Yr-8-teaching-sequence.md' },
+      { year: 'Yr 9', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/science/Science-Yr-9-teaching-sequence.md' },
+      { year: 'Yr 10', url: 'https://raw.githubusercontent.com/spurstate/workdesk-releases/main/nz_curriculum/science/Science-Yr-10-teaching-sequence.md' },
+    ],
+  },
 ]
+
+async function downloadCurriculumFile(url: string) {
+  const filename = decodeURIComponent(url.split('/').pop() ?? 'curriculum.md')
+  const response = await fetch(url)
+  const blob = await response.blob()
+  const objectUrl = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = objectUrl
+  a.download = filename
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(a)
+  URL.revokeObjectURL(objectUrl)
+}
 
 export default function Workdesk() {
   const [tourOpen, setTourOpen] = useState(false)
@@ -232,8 +292,48 @@ export default function Workdesk() {
         </div>
       </section>
 
+      {/* Curriculum downloads */}
+      <section className="bg-gray-50 py-24 border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="max-w-2xl mb-14">
+            <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-3">Curriculum Resources</p>
+            <h2 className="text-4xl font-bold text-gray-950 leading-tight mb-4">
+              Download curriculum files for Workdesk.
+            </h2>
+            <p className="text-lg text-gray-600">
+              These are text files from Tāhūrangi — the New Zealand Curriculum refresh. Upload them into Workdesk so it plans around exactly what you're teaching. Choose the files for your year level and learning area.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {curriculumSubjects.map((subject) => (
+              <div key={subject.subject} className="rounded-2xl border border-gray-200 p-6 hover:border-blue-200 hover:shadow-sm transition-all bg-white">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+                    <BookOpen size={18} className="text-blue-600" />
+                  </div>
+                  <h3 className="font-bold text-gray-900">{subject.subject}</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {subject.files.map((file) => (
+                    <button
+                      key={file.year}
+                      onClick={() => downloadCurriculumFile(file.url)}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-50 border border-gray-200 text-sm text-gray-700 font-medium hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 transition-colors"
+                    >
+                      <FileDown size={13} />
+                      {file.year}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Comparison */}
-      <section className="bg-gray-50 py-24">
+      <section className="bg-white py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-2xl mb-14">
             <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-3">Why Workdesk</p>
@@ -278,7 +378,7 @@ export default function Workdesk() {
       </section>
 
       {/* Privacy callout */}
-      <section className="bg-white py-16 border-y border-gray-100">
+      <section className="bg-gray-50 py-16 border-y border-gray-100">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mx-auto mb-5">
             <Shield size={24} className="text-blue-600" />
@@ -291,68 +391,17 @@ export default function Workdesk() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-gray-50 py-24">
+      <section className="bg-white py-24">
         <div className="max-w-3xl mx-auto px-6">
           <div className="mb-12 text-center">
             <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-3">FAQ</p>
             <h2 className="text-4xl font-bold text-gray-950">Common questions.</h2>
           </div>
-          <div className="bg-white rounded-2xl border border-gray-200 px-8 py-2">
+          <div className="bg-gray-50 rounded-2xl border border-gray-200 px-8 py-2">
             {faqs.map((faq, i) => (
               <FAQ key={i} {...faq} />
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Curriculum downloads */}
-      <section className="bg-white py-24 border-t border-gray-100">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="max-w-2xl mb-14">
-            <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-3">Curriculum Resources</p>
-            <h2 className="text-4xl font-bold text-gray-950 leading-tight mb-4">
-              Download curriculum files for Workdesk.
-            </h2>
-            <p className="text-lg text-gray-600">
-              Upload these into Workdesk to give it the context of the NZ Curriculum. Choose the files relevant to your year level and learning area.
-            </p>
-          </div>
-
-          {curriculumFiles.length === 0 ? (
-            <div className="rounded-2xl border border-dashed border-gray-200 bg-gray-50 p-12 flex flex-col items-center justify-center text-center max-w-md">
-              <div className="w-12 h-12 rounded-2xl bg-gray-100 flex items-center justify-center mb-4">
-                <FileDown size={22} className="text-gray-400" />
-              </div>
-              <p className="font-semibold text-gray-500 mb-1">Curriculum files coming soon</p>
-              <p className="text-sm text-gray-400 leading-relaxed">We'll notify beta testers when they're available to download.</p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {curriculumFiles.map((file, i) => (
-                <div key={i} className="rounded-2xl border border-gray-200 p-6 hover:border-blue-200 hover:shadow-sm transition-all flex flex-col gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-                    <FileDown size={18} className="text-blue-600" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-gray-900 mb-1">{file.title}</h3>
-                    <p className="text-sm text-gray-500 leading-relaxed">{file.description}</p>
-                  </div>
-                  {file.url ? (
-                    <a
-                      href={file.url}
-                      download
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors self-start"
-                    >
-                      <Download size={14} />
-                      Download
-                    </a>
-                  ) : (
-                    <span className="text-xs text-gray-400 font-medium">Coming soon</span>
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </section>
 
