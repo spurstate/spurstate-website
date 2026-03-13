@@ -208,8 +208,8 @@ export default function Workdesk() {
               Free Beta — Windows & Mac
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-950 leading-tight tracking-tight mb-6">
-              Report writing used to take 20 hours.<br className="hidden sm:block" />
-              <span className="text-blue-600"><br />Now it takes two.</span>
+              Report writing used to take 20 hours.<br />
+              <span className="text-blue-600">Now it takes two.</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
               Workdesk is a desktop app for teachers. Lesson plans, unit plans, and report comments — generated in seconds, built around the New Zealand Curriculum, personalised to your school, environment and class.
