@@ -57,7 +57,7 @@ export default function Home() {
                 <span className="text-blue-600">the way you work.</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-10">
-                Spurstate helps New Zealand businesses get AI working — not just installed. We come in, learn how your business operates, and configure AI around it. You don't touch a thing.
+                Spurstate helps New Zealand businesses get AI working — not just installed. We come in, learn how your business operates, and configure AI around it. All you do is use it.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
