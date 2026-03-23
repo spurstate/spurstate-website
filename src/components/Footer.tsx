@@ -29,25 +29,26 @@ export default function Footer() {
             <h3 className="text-white text-sm font-semibold mb-4 text-blue-100">Navigation</h3>
             <ul className="flex flex-col gap-2.5 text-sm">
               <li><Link to="/" className="hover:text-blue-100 transition-colors">Home</Link></li>
-              <li><Link to="/workdesk" className="hover:text-blue-100 transition-colors">Workdesk</Link></li>
-              <li><Link to="/download" className="hover:text-blue-100 transition-colors">Download</Link></li>
               <li><Link to="/about" className="hover:text-blue-100 transition-colors">About</Link></li>
               <li><Link to="/contact" className="hover:text-blue-100 transition-colors">Contact</Link></li>
             </ul>
           </div>
 
-          {/* Products */}
+          {/* Contact */}
           <div>
-            <h3 className="text-blue-100 text-sm font-semibold mb-4">Products</h3>
+            <h3 className="text-blue-100 text-sm font-semibold mb-4">Get in touch</h3>
             <ul className="flex flex-col gap-2.5 text-sm">
               <li>
-                <Link to="/workdesk" className="hover:text-blue-100 transition-colors">
-                  Workdesk — NZ Teacher AI
+                <a href="mailto:hello@spurstate.co.nz" className="hover:text-blue-100 transition-colors">
+                  hello@spurstate.co.nz
+                </a>
+              </li>
+              <li>
+                <Link to="/contact#contact-form" className="hover:text-blue-100 transition-colors">
+                  Book a free call
                 </Link>
               </li>
-              <li className="text-blue-800 italic">More coming soon</li>
             </ul>
-
           </div>
         </div>
 

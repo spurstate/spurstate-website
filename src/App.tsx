@@ -4,9 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
-import Workdesk from './pages/Workdesk'
 import Contact from './pages/Contact'
-import Download from './pages/Download'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -26,9 +24,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/workdesk" element={<Workdesk />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/download" element={<Download />} />
           </Routes>
         </main>
         <Footer />

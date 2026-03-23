@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Target, Zap, Users, Globe } from 'lucide-react'
+import { Target, Zap, Users, Globe } from 'lucide-react'
 
 const values = [
   {
@@ -15,12 +15,12 @@ const values = [
   {
     icon: Users,
     title: 'Built for real people',
-    description: 'Our customers are time-poor. They\'re running businesses, teaching classrooms, managing everything at once. We meet them where they are.',
+    description: 'Our customers are time-poor. They\'re running businesses, managing everything at once. We meet them where they are.',
   },
   {
     icon: Globe,
     title: 'New Zealand-first',
-    description: 'We\'re based in Auckland and we build for New Zealand. That means understanding local context, local curriculum, and local business realities.',
+    description: 'We\'re based in Auckland and we build for New Zealand. That means understanding local context and local business realities.',
   },
 ]
 
@@ -34,12 +34,12 @@ const timeline = [
     description: 'Spurstate was founded with a single focus: build AI tools and services that are actually usable by the people who need them most.',
   },
   {
-    title: 'First product: Workdesk',
-    description: 'Teachers were the clearest example of the problem. 47.5-hour weeks. Crushing admin. Generic AI tools that required expert prompting to get anything useful. Workdesk was the answer.',
+    title: 'First products',
+    description: 'NZ businesses and professionals were the clearest example of the problem — time-poor, tech-sceptical, and using generic AI tools that required expert prompting to get anything useful.',
   },
   {
     title: 'What\'s next',
-    description: 'Workdesk is just the start. Spurstate is building a suite of AI tools for different New Zealand professional contexts — all with the same philosophy: useful by default, not useful eventually.',
+    description: 'Spurstate is building AI tools and services for New Zealand — all with the same philosophy: useful by default, not useful eventually.',
   },
 ]
 
@@ -142,7 +142,7 @@ export default function About() {
               Built for the people doing the actual work.
             </h2>
             <p className="text-lg text-gray-600">
-              We don't work with enterprise. We work with the people who are running their own businesses, managing their own classrooms, and figuring it out as they go.
+              We don't work with enterprise. We work with the people who are running their own businesses and figuring it out as they go.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -161,12 +161,12 @@ export default function About() {
               </ul>
             </div>
             <div className="rounded-2xl bg-gray-50 border border-gray-200 p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">New Zealand Teachers</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Sole traders & professionals</h3>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Primary and secondary teachers who spend more time on documentation than they should. Workdesk is built specifically for them — around the NZ Curriculum, their school, their class, their way of working.
+                You're doing everything yourself. AI doesn't replace that — it multiplies it. We help you identify where AI can take things off your plate and put the right tools in place.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
-                {['Lesson plans in seconds, not hours', 'Report comments without the dread', 'Built for NZ — not a generic tool', 'Private by design, runs locally'].map((item, i) => (
+                {['AI that multiplies what you can do alone', 'Repetitive tasks automated so you can focus', 'Faster output without sacrificing quality', 'Practical, not theoretical'].map((item, i) => (
                   <li key={i} className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-gray-400 shrink-0" />
                     {item}
@@ -189,16 +189,16 @@ export default function About() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              to="/contact"
+              to="/contact#contact-form"
               className="px-7 py-4 rounded-xl bg-white text-blue-600 font-bold hover:bg-blue-50 transition-colors"
             >
               Book a free call
             </Link>
             <Link
-              to="/workdesk"
+              to="/about"
               className="inline-flex items-center gap-2 px-7 py-4 rounded-xl border-2 border-white/40 text-white font-bold hover:bg-white/10 transition-colors"
             >
-              See Workdesk <ArrowRight size={16} />
+              Our mission
             </Link>
           </div>
         </div>

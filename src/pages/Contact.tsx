@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Mail, MapPin, Phone, ArrowRight, CheckCircle } from 'lucide-react'
 
 type FormState = 'idle' | 'sending' | 'sent'
 
 const reasons = [
-  { value: 'workdesk-beta', label: 'Workdesk beta access (teacher)' },
   { value: 'ai-consulting', label: 'AI adoption & consulting (business)' },
   { value: 'general', label: 'General enquiry' },
 ]
@@ -12,6 +12,13 @@ const reasons = [
 export default function Contact() {
   const [form, setForm] = useState({ firstName: '', lastName: '', email: '', reason: '', message: '' })
   const [formState, setFormState] = useState<FormState>('idle')
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (hash === '#contact-form') {
+      document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })
+    }
+  }, [hash])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -45,7 +52,7 @@ export default function Contact() {
               <span className="text-blue-600">what's possible.</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Whether you're a teacher curious about Workdesk, a business owner wondering what AI could do for you, or just want to say hello — I'd love to hear from you.
+              Whether you're a business owner wondering what AI could do for you, or just want to say hello — I'd love to hear from you.
             </p>
           </div>
         </div>
@@ -72,7 +79,7 @@ export default function Contact() {
       </section>
 
       {/* Content */}
-      <section className="bg-white py-16 pb-32">
+      <section id="contact-form" className="bg-white py-16 pb-32">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
             {/* Info */}
@@ -110,20 +117,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="mt-12 p-6 rounded-2xl bg-blue-50 border border-blue-100">
-                <h3 className="font-bold text-gray-900 mb-2">Applying for Workdesk beta?</h3>
-                <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                  We're looking for a small group of Auckland primary school teachers. Free access, API costs covered by Spurstate. Just use Workdesk in your actual teaching practice and give us honest feedback.
-                </p>
-                <div className="flex flex-col gap-2 text-sm text-gray-600">
-                  {['Free during beta period', 'Mac & Windows supported', 'Direct input into product direction', 'No technical knowledge needed'].map((item, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <CheckCircle size={14} className="text-blue-600 shrink-0" />
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
 
             {/* Form */}

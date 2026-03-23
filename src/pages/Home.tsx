@@ -15,7 +15,7 @@ const howWeHelp = [
   {
     icon: Package,
     title: 'Build',
-    description: 'When off-the-shelf AI isn\'t enough, we build it. Workdesk is the first example — purpose-built for NZ teachers. More purpose-built tools are in development.',
+    description: 'When off-the-shelf AI isn\'t enough, we build it. Purpose-built tools for specific NZ professional contexts — designed to be useful from day one.',
   },
 ]
 
@@ -57,7 +57,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contact"
+                to="/contact#contact-form"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors"
               >
                 Book a free call
@@ -149,7 +149,7 @@ export default function Home() {
           </div>
           <div className="mt-10">
             <Link
-              to="/contact"
+              to="/contact#contact-form"
               className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
             >
               Book a free call to talk through your situation <ArrowRight size={16} />
@@ -237,57 +237,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Products teaser */}
-      <section className="bg-white py-24 border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
-            <div>
-              <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-3">Products</p>
-              <h2 className="text-4xl font-bold text-gray-950 leading-tight">
-                We also build our own tools.
-              </h2>
-            </div>
-            <Link
-              to="/workdesk"
-              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors shrink-0"
-            >
-              See Workdesk <ArrowRight size={16} />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link to="/workdesk" className="group rounded-2xl border border-blue-100 bg-blue-50 p-8 hover:border-blue-300 hover:shadow-md transition-all">
-              <div className="flex items-center gap-3 mb-4">
-                <img src="/assets/icon-mark.png" alt="" className="w-9 h-9" />
-                <div>
-                  <p className="font-bold text-gray-900">Workdesk</p>
-                  <p className="text-xs text-blue-600 font-semibold">Now in beta</p>
-                </div>
-              </div>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                A desktop app for NZ teachers that generates lesson plans, unit plans, and report comments using AI — built around the NZ Curriculum and personalised to your school.
-              </p>
-              <span className="inline-flex items-center gap-1.5 text-blue-600 text-sm font-semibold group-hover:gap-2.5 transition-all">
-                Learn more <ArrowRight size={14} />
-              </span>
-            </Link>
-            <div className="rounded-2xl border border-dashed border-gray-200 bg-gray-50 p-8 flex flex-col justify-center">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 rounded-lg bg-gray-200 flex items-center justify-center">
-                  <span className="text-gray-400 font-bold text-lg">+</span>
-                </div>
-                <div>
-                  <p className="font-bold text-gray-400">More coming</p>
-                  <p className="text-xs text-gray-400">In development</p>
-                </div>
-              </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Workdesk is just the start. Spurstate is building AI tools for more NZ professional contexts. Same philosophy: useful by default, not eventually.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="bg-blue-600 py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -299,7 +248,7 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              to="/contact"
+              to="/contact#contact-form"
               className="px-7 py-4 rounded-xl bg-white text-blue-600 font-bold hover:bg-blue-50 transition-colors"
             >
               Book a free call

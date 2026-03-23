@@ -6,7 +6,6 @@ const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' },
-  { label: 'Workdesk', to: '/workdesk' },
 ]
 
 export default function Navbar() {
@@ -50,10 +49,10 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            to="/download"
+            to="/contact#contact-form"
             className="ml-3 px-4 py-2 rounded-lg text-sm font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors"
           >
-            Download
+            Book a call
           </Link>
         </div>
 
@@ -83,10 +82,10 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            to="/download"
+            to="/contact"
             className="mt-2 px-4 py-3 rounded-lg text-sm font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors text-center"
           >
-            Download
+            Book a call
           </Link>
         </div>
       )}
