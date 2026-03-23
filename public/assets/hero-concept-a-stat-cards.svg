@@ -12,9 +12,9 @@
   </defs>
 
   <!-- Background decorative circles -->
-  <circle cx="760" cy="200" r="180" fill="#93C5FD" opacity="0.08"/>
-  <circle cx="200" cy="680" r="120" fill="#93C5FD" opacity="0.06"/>
-  <circle cx="580" cy="700" r="90" fill="#93C5FD" opacity="0.05"/>
+  <circle cx="760" cy="200" r="180" fill="#93C5FD" opacity="0.17"/>
+  <circle cx="200" cy="680" r="120" fill="#93C5FD" opacity="0.14"/>
+  <circle cx="580" cy="700" r="90" fill="#93C5FD" opacity="0.12"/>
 
   <!-- Card 3 (back) — Inside your tools -->
   <g filter="url(#shadow-a)" transform="translate(280, 440)">
