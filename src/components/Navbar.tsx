@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react'
 
 const navLinks = [
   { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
+  { label: 'Mission', to: '/mission' },
 ]
 
 export default function Navbar() {
@@ -51,7 +51,7 @@ export default function Navbar() {
             to="/contact"
             className="ml-3 px-4 py-2 rounded-lg text-sm font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors"
           >
-            Book a call
+            Book a free call
           </Link>
         </div>
 
@@ -84,7 +84,7 @@ export default function Navbar() {
             to="/contact"
             className="mt-2 px-4 py-3 rounded-lg text-sm font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors text-center"
           >
-            Book a call
+            Book a free call
           </Link>
         </div>
       )}

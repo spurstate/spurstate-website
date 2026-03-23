@@ -5,41 +5,41 @@ const values = [
   {
     icon: Target,
     title: 'Outcomes over features',
-    description: 'We don\'t sell AI. We sell results. Every tool we build, every service we deliver, is measured by what it actually does for the people using it.',
+    description: 'We don\'t sell AI. We sell results. Every service we deliver is measured by what it actually does for the people using it.',
   },
   {
     icon: Zap,
     title: 'Speed without complexity',
-    description: 'AI shouldn\'t require a PhD to use. We build systems that are fast to learn, fast to use, and fast to deliver value — from day one.',
+    description: 'Getting AI working shouldn\'t take months. We configure fast, implement fast, and make sure you see value fast — from day one.',
   },
   {
     icon: Users,
     title: 'Built for real people',
-    description: 'Our customers are time-poor. They\'re running businesses, managing everything at once. We meet them where they are.',
+    description: 'Our clients are time-poor. They\'re running businesses, managing everything at once. We meet them where they are — not where it\'s convenient for us.',
   },
   {
     icon: Globe,
     title: 'New Zealand-first',
-    description: 'We\'re based in Auckland and we build for New Zealand. That means understanding local context and local business realities.',
+    description: 'We\'re based in Auckland and we work for New Zealand. That means understanding local context, local customers, and local business realities.',
   },
 ]
 
 const timeline = [
   {
     title: 'The observation',
-    description: 'New Zealand businesses and professionals feeling left behind by the AI adoption wave. The tools existed — but they weren\'t built for them.',
+    description: 'New Zealand businesses were being left behind. Not for lack of interest — for lack of practical support. The tools existed. The guidance didn\'t.',
   },
   {
     title: 'The decision',
-    description: 'Spurstate was founded with a single focus: build AI tools and services that are actually usable by the people who need them most.',
+    description: 'Spurstate was founded with one focus: help NZ businesses and professionals get AI actually working for them. Not in theory. In practice, inside the tools they already use.',
   },
   {
-    title: 'First products',
-    description: 'NZ businesses and professionals were the clearest example of the problem — time-poor, tech-sceptical, and using generic AI tools that required expert prompting to get anything useful.',
+    title: 'The approach',
+    description: 'No new software to learn. No technical knowledge required. We come in, configure AI around the way a business already operates, and make sure it\'s running before we leave.',
   },
   {
     title: 'What\'s next',
-    description: 'Spurstate is building AI tools and services for New Zealand — all with the same philosophy: useful by default, not useful eventually.',
+    description: 'Expanding across New Zealand — same philosophy, same approach. Useful by default, not useful eventually.',
   },
 ]
 
@@ -53,11 +53,11 @@ export default function About() {
           <div className="max-w-3xl">
             <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-4">Our mission</p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-950 leading-tight tracking-tight mb-6">
-              Spurstate helps<br />New Zealand businesses move faster with AI —<br className="hidden sm:block" />
-              <span className="text-blue-600">one goal at a time.</span>
+              Spurstate helps New Zealand businesses<br className="hidden sm:block" />move faster with AI —<br />
+              <span className="text-blue-600">starting from where they are.</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-              We work with local business owners, sole traders, and professionals who are time-poor, tech-sceptical, and have been left behind by the AI adoption trends everyone keeps talking about.
+              We work with local business owners, sole traders, and professionals who are time-poor, tech-sceptical, and ready to get something actually working.
             </p>
           </div>
         </div>
@@ -85,13 +85,13 @@ export default function About() {
             <div>
               <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-3">How we got here</p>
               <h2 className="text-4xl font-bold text-gray-950 leading-tight mb-6">
-                Getting started is easier than you think.
+                Built from a simple observation.
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                AI is changing the way businesses operate. The good news is you don't need to understand it deeply to benefit from it — you just need the right support to get started.
+                AI is changing the way businesses operate. But most of that change is happening without New Zealand businesses — not because the tools aren't good enough, but because nobody's shown them how to make it work for them.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Spurstate exists to be that support for New Zealand businesses and professionals. Not by overwhelming them with tools, but by giving them exactly what they need to move forward.
+                Spurstate exists to close that gap.
               </p>
             </div>
             <div className="relative pl-8">
@@ -147,12 +147,12 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="rounded-2xl bg-blue-50 border border-blue-100 p-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">New Zealand Businesses</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">NZ Business owners</h3>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Local business owners and sole traders who know AI is important, but they haven't had time — or the right guidance — to make it work for them. We build systems that are practical, immediate, and actually useful.
+                Local business owners and sole traders who know AI is important, but haven't had the time — or the right guidance — to make it work for them. We do the setup. They get the benefit.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
-                {['AI workflows that save real hours', 'Tools implemented and working within days', 'More output without more headcount', 'Systems that keep delivering after we\'re done'].map((item, i) => (
+                {['AI workflows that save real hours', 'Set up and working within days', 'More output without more headcount', 'Systems that keep delivering after we\'re done'].map((item, i) => (
                   <li key={i} className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
                     {item}
@@ -163,10 +163,10 @@ export default function About() {
             <div className="rounded-2xl bg-gray-50 border border-gray-200 p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Sole traders & professionals</h3>
               <p className="text-gray-600 leading-relaxed mb-5">
-                You're doing everything yourself. AI doesn't replace that — it multiplies it. We help you identify where AI can take things off your plate and put the right tools in place.
+                You're doing everything yourself. AI doesn't replace that — it multiplies it. We find where AI takes things off your plate and make it happen. You keep working the way you work.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
-                {['AI that multiplies what you can do alone', 'Repetitive tasks automated so you can focus', 'Faster output without sacrificing quality', 'Practical, not theoretical'].map((item, i) => (
+                {['AI that multiplies what you can do alone', 'Repetitive tasks handled so you can focus', 'Faster output without sacrificing quality', 'Practical, not theoretical'].map((item, i) => (
                   <li key={i} className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-gray-400 shrink-0" />
                     {item}
@@ -195,7 +195,7 @@ export default function About() {
               Book a free call
             </Link>
             <Link
-              to="/about"
+              to="/mission"
               className="inline-flex items-center gap-2 px-7 py-4 rounded-xl border-2 border-white/40 text-white font-bold hover:bg-white/10 transition-colors"
             >
               Our mission

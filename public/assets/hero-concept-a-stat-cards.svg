@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 840" fill="none">
+  <defs>
+    <filter id="shadow-a" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#172554" flood-opacity="0.08"/>
+    </filter>
+    <filter id="shadow-b" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="#172554" flood-opacity="0.10"/>
+    </filter>
+    <filter id="shadow-c" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#172554" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background decorative circles -->
+  <circle cx="760" cy="200" r="180" fill="#93C5FD" opacity="0.08"/>
+  <circle cx="200" cy="680" r="120" fill="#93C5FD" opacity="0.06"/>
+  <circle cx="580" cy="700" r="90" fill="#93C5FD" opacity="0.05"/>
+
+  <!-- Card 3 (back) — Inside your tools -->
+  <g filter="url(#shadow-a)" transform="translate(280, 440)">
+    <rect width="440" height="160" rx="12" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="40" y="95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="44" font-weight="700" fill="#2563EB">Quick to adopt</text>
+    <text x="40" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="20" fill="#6B7280">smooth handover from day one</text>
+  </g>
+
+  <!-- Card 2 (middle) — 1 day -->
+  <g filter="url(#shadow-b)" transform="translate(220, 260)">
+    <rect width="440" height="160" rx="12" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="40" y="95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="44" font-weight="700" fill="#2563EB">Fast to deploy</text>
+    <text x="40" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="20" fill="#6B7280">set up within days, not months</text>
+    <!-- Small accent bar -->
+    <rect x="370" y="60" width="36" height="4" rx="2" fill="#93C5FD" opacity="0.5"/>
+    <rect x="370" y="72" width="24" height="4" rx="2" fill="#93C5FD" opacity="0.3"/>
+  </g>
+
+  <!-- Card 1 (front) — 12hrs -->
+  <g filter="url(#shadow-c)" transform="translate(160, 80)">
+    <rect width="440" height="160" rx="12" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="40" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="56" font-weight="700" fill="#2563EB">12hrs</text>
+    <text x="40" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="20" fill="#6B7280">saved per week</text>
+    <!-- Blue accent pip -->
+    <circle cx="400" cy="40" r="6" fill="#2563EB" opacity="0.15"/>
+    <circle cx="420" cy="40" r="6" fill="#2563EB" opacity="0.25"/>
+    <circle cx="400" cy="60" r="6" fill="#2563EB" opacity="0.10"/>
+  </g>
+
+  <!-- Small decorative dots pattern bottom-right -->
+  <g opacity="0.06" fill="#172554">
+    <circle cx="780" cy="560" r="3"/>
+    <circle cx="800" cy="560" r="3"/>
+    <circle cx="820" cy="560" r="3"/>
+    <circle cx="780" cy="580" r="3"/>
+    <circle cx="800" cy="580" r="3"/>
+    <circle cx="820" cy="580" r="3"/>
+    <circle cx="780" cy="600" r="3"/>
+    <circle cx="800" cy="600" r="3"/>
+    <circle cx="820" cy="600" r="3"/>
+  </g>
+</svg>

@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <img src="/assets/logo.png" alt="Spurstate" className="h-14 w-auto self-start" />
             <p className="text-sm leading-relaxed mb-8">
-              AI tools that work for the rest of us.
+              AI set up for the way you work.
             </p>
             <div className="flex items-center gap-2 text-sm">
               <MapPin size={14} className="shrink-0" />
@@ -29,7 +29,7 @@ export default function Footer() {
             <h3 className="text-white text-sm font-semibold mb-4 text-blue-100">Navigation</h3>
             <ul className="flex flex-col gap-2.5 text-sm">
               <li><Link to="/" className="hover:text-blue-100 transition-colors">Home</Link></li>
-              <li><Link to="/about" className="hover:text-blue-100 transition-colors">About</Link></li>
+              <li><Link to="/mission" className="hover:text-blue-100 transition-colors">Mission</Link></li>
               <li><Link to="/contact" className="hover:text-blue-100 transition-colors">Contact</Link></li>
             </ul>
           </div>

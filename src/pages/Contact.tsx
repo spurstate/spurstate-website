@@ -4,7 +4,7 @@ import { Mail, MapPin, Phone, ArrowRight, CheckCircle } from 'lucide-react'
 type FormState = 'idle' | 'sending' | 'sent'
 
 const reasons = [
-  { value: 'ai-consulting', label: 'AI adoption & consulting (business)' },
+  { value: 'ai-consulting', label: 'AI consulting & setup' },
   { value: 'general', label: 'General enquiry' },
 ]
 
@@ -64,7 +64,7 @@ export default function Contact() {
               <p className="text-blue-600 text-xs font-semibold uppercase tracking-widest mb-1">Founder</p>
               <h2 className="text-xl font-bold text-gray-950 mb-2">Mitch Wilson</h2>
               <p className="text-gray-600 text-sm leading-relaxed max-w-xl">
-                I'm Mitch Wilson, a software developer based in Auckland. AI is changing the way work gets done — but most of that change is happening without New Zealand businesses. I started Spurstate to close that gap: helping people understand what AI can actually do for them, and building tools that make it practical to use.
+                I'm Mitch Wilson, a software developer based in Auckland. AI is changing the way work gets done — but most of that change is happening without New Zealand businesses. I started Spurstate to close that gap: getting AI actually configured and working for the people who need it most.
               </p>
             </div>
           </div>
@@ -92,20 +92,20 @@ export default function Contact() {
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+                    <Phone size={18} className="text-blue-600" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900 mb-0.5">Phone</p>
+                    <a href="tel:+64211822065" className="text-blue-600 hover:text-blue-700 transition-colors text-sm">021 182 2065</a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
                     <MapPin size={18} className="text-blue-600" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-gray-900 mb-0.5">Location</p>
                     <p className="text-gray-500 text-sm">Auckland, New Zealand</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-                    <Phone size={18} className="text-blue-600" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-gray-900 mb-0.5">Response time</p>
-                    <p className="text-gray-500 text-sm">We reply within one business day.</p>
                   </div>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export default function Contact() {
                       rows={6}
                       value={form.message}
                       onChange={handleChange}
-                      placeholder="Tell us a bit about yourself and what you're looking for…"
+                      placeholder="Tell us a bit about your business and what you're looking for…"
                       className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"
                     />
                   </div>
@@ -229,8 +229,8 @@ export default function Contact() {
       {/* Bottom bar */}
       <section className="bg-blue-950 py-16">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-blue-300 text-lg mb-2">Based in Auckland. Building for New Zealand.</p>
-          <p className="text-blue-700 text-sm">Spurstate — AI tools that work for the rest of us.</p>
+          <p className="text-blue-300 text-lg mb-2">Based in Auckland. Working for New Zealand.</p>
+          <p className="text-blue-700 text-sm">Spurstate — AI set up for the way you work.</p>
         </div>
       </section>
     </div>

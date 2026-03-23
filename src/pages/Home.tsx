@@ -1,29 +1,32 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Cpu, Lightbulb, Users, Zap, Package } from 'lucide-react'
+import { ArrowRight, Cpu, Lightbulb, Users, Zap, RefreshCw, Settings } from 'lucide-react'
 
 const howWeHelp = [
   {
     icon: Cpu,
-    title: 'Adopt',
-    description: 'We assess your business, identify where AI makes the biggest difference, and get it implemented. You don\'t need to understand the technology — you just need it working.',
+    title: 'AI Audit',
+    badge: 'Free',
+    description: 'We come in, learn how your business works, and identify the top three places AI can save you meaningful time each week. You get a written summary. No commitment required.',
   },
   {
     icon: Zap,
-    title: 'Adapt',
-    description: 'We rebuild your workflows around AI so you move faster, produce more, and spend less time on the tasks that slow you down. The result is a business that runs better.',
+    title: 'AI Setup',
+    badge: null,
+    description: 'We implement AI inside the tools your business already uses. You don\'t touch a line of code — we set it up, show you how it works, and make sure it\'s running before we\'re done.',
   },
   {
-    icon: Package,
-    title: 'Build',
-    description: 'When off-the-shelf AI isn\'t enough, we build it. Purpose-built tools for specific NZ professional contexts — designed to be useful from day one.',
+    icon: RefreshCw,
+    title: 'AI Support',
+    badge: null,
+    description: 'AI is moving fast. A monthly retainer means your tools stay current, new automations get added when they\'re useful, and you don\'t have to think about it.',
   },
 ]
 
 const differentiators = [
   {
-    icon: Cpu,
-    title: 'AI-first by default',
-    description: 'We don\'t bolt AI on as an afterthought. Every engagement starts with it. That\'s what makes us different from every other consultancy.',
+    icon: Settings,
+    title: 'We do the setup',
+    description: 'We don\'t hand you a tool and wish you luck. We configure it, implement it, and make sure it works for your specific business before we\'re done.',
   },
   {
     icon: Lightbulb,
@@ -32,7 +35,7 @@ const differentiators = [
   },
   {
     icon: Users,
-    title: 'Built for NZ businesses',
+    title: 'Built for NZ',
     description: 'We\'re based in Auckland. We understand the local market, local customers, and the realities of running a business here.',
   },
 ]
@@ -42,33 +45,42 @@ export default function Home() {
     <div className="pt-16">
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-white">
-        <div className="max-w-6xl mx-auto px-6 pt-24 pb-48 md:pt-32 md:pb-60 w-full">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 bg-white text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-8 border border-blue-100 shadow-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-              AI Solutions — Auckland, New Zealand
+        <div className="max-w-6xl mx-auto px-6 pt-24 pb-20 md:pt-32 md:pb-28 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-center">
+            <div className="lg:col-span-2">
+              <div className="inline-flex items-center gap-2 bg-white text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-8 border border-blue-100 shadow-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+                AI Consulting — Auckland, New Zealand
+              </div>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-950 leading-[1.05] tracking-tight mb-6">
+                AI set up for<br />
+                <span className="text-blue-600">the way you work.</span>
+              </h1>
+              <p className="text-xl text-gray-600 leading-relaxed mb-10">
+                Spurstate helps New Zealand businesses get AI working — not just installed. We come in, learn how your business operates, and configure AI around it. You don't touch a thing.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Book a free call
+                  <ArrowRight size={16} />
+                </Link>
+                <Link
+                  to="/mission"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-gray-200 text-gray-700 font-semibold hover:bg-white hover:border-gray-300 transition-colors"
+                >
+                  Our mission
+                </Link>
+              </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-950 leading-[1.05] tracking-tight mb-6">
-              AI tools that work<br />
-              <span className="text-blue-600">for the rest of us.</span>
-            </h1>
-            <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              Spurstate helps New Zealand businesses adopt AI — so they can move faster, work smarter, and do more with less.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Book a free call
-                <ArrowRight size={16} />
-              </Link>
-              <Link
-                to="/about"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-gray-200 text-gray-700 font-semibold hover:bg-white hover:border-gray-300 transition-colors"
-              >
-                Our mission
-              </Link>
+            <div className="hidden lg:flex items-center justify-center lg:col-span-3">
+              <img
+                src="/assets/hero-concept-a-stat-cards.svg"
+                alt=""
+                className="w-full"
+              />
             </div>
           </div>
         </div>
@@ -78,8 +90,7 @@ export default function Home() {
       <section className="bg-blue-950 text-white py-28 md:py-32">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-2xl md:text-3xl font-semibold text-white leading-snug">
-            "Most businesses are still doing things the slow way. <br className="hidden md:block" />
-            We show them what's possible — and set them up to actually use it."
+            "Most businesses know AI is useful. They just haven't had the right help to make it work for them."
           </p>
         </div>
       </section>
@@ -94,13 +105,13 @@ export default function Home() {
                 We work directly<br />with your business.
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Spurstate is an AI solutions company. We work with NZ businesses, sole traders, and professionals who know AI is important but they haven't had the time — or the right guidance — to make it work for them.
+                Spurstate is an AI consulting and implementation company. We work with NZ business owners, sole traders, and professionals who know AI is important — but haven't had the time or the right guidance to make it work for them.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                We build systems that keep working after the engagement ends. That's what makes us different.
+                We don't just advise. We do the setup. And we build it to keep working long after the engagement ends.
               </p>
               <Link
-                to="/about"
+                to="/mission"
                 className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
               >
                 Learn about Spurstate <ArrowRight size={16} />
@@ -130,19 +141,22 @@ export default function Home() {
           <div className="max-w-2xl mb-14">
             <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-3">How we help</p>
             <h2 className="text-4xl font-bold text-gray-950 leading-tight mb-4">
-              Adopt. Adapt. Build.
+              Three steps. Real results.
             </h2>
             <p className="text-lg text-gray-600">
-              Every engagement is different. But the goal is always the same — AI that actually works for your business, not against it.
+              Every business is different. But the process is the same — understand what you need, implement what works, and make sure it keeps working.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {howWeHelp.map(({ icon: Icon, title, description }, i) => (
+            {howWeHelp.map(({ icon: Icon, title, badge, description }, i) => (
               <div key={i} className="bg-white rounded-2xl p-7 border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all">
                 <div className="w-11 h-11 rounded-xl bg-blue-100 flex items-center justify-center mb-5">
                   <Icon size={20} className="text-blue-700" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="text-lg font-bold text-gray-900">{title}</h3>
+                  {badge && <span className="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-100 px-2 py-0.5 rounded-full">{badge}</span>}
+                </div>
                 <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
               </div>
             ))}
@@ -203,9 +217,9 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-blue-300">
                 {[
                   'AI workflows that save real hours every week',
-                  'Tools implemented and working within days',
+                  'Set up and working within days',
                   'More output without more headcount',
-                  'Plain-language guidance, no assumptions',
+                  'Plain-language guidance throughout',
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
@@ -217,12 +231,12 @@ export default function Home() {
             <div className="rounded-2xl bg-blue-900/60 border border-blue-800 p-8">
               <h3 className="text-xl font-bold text-white mb-3">Sole traders & professionals</h3>
               <p className="text-blue-200 leading-relaxed mb-5 text-sm">
-                You're doing everything yourself. AI doesn't replace that — it multiplies it. We help you identify where AI can take things off your plate and put the right tools in place.
+                You're doing everything yourself. AI doesn't replace that — it multiplies it. We find where AI takes things off your plate and put it in place. You keep working the way you work.
               </p>
               <ul className="space-y-2 text-sm text-blue-300">
                 {[
                   'AI that multiplies what you can do alone',
-                  'Repetitive tasks automated so you can focus',
+                  'Repetitive tasks handled so you can focus',
                   'Faster output without sacrificing quality',
                   'Practical, not theoretical',
                 ].map((item, i) => (
@@ -254,7 +268,7 @@ export default function Home() {
               Book a free call
             </Link>
             <Link
-              to="/about"
+              to="/mission"
               className="px-7 py-4 rounded-xl border-2 border-white/40 text-white font-bold hover:bg-white/10 transition-colors"
             >
               Our mission
