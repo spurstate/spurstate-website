@@ -189,7 +189,7 @@ export default function About() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              to="/contact#contact-form"
+              to="/contact"
               className="px-7 py-4 rounded-xl bg-white text-blue-600 font-bold hover:bg-blue-50 transition-colors"
             >
               Book a free call

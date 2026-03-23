@@ -57,7 +57,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contact#contact-form"
+                to="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors"
               >
                 Book a free call
@@ -149,7 +149,7 @@ export default function Home() {
           </div>
           <div className="mt-10">
             <Link
-              to="/contact#contact-form"
+              to="/contact"
               className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
             >
               Book a free call to talk through your situation <ArrowRight size={16} />
@@ -248,7 +248,7 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              to="/contact#contact-form"
+              to="/contact"
               className="px-7 py-4 rounded-xl bg-white text-blue-600 font-bold hover:bg-blue-50 transition-colors"
             >
               Book a free call

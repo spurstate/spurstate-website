@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useState } from 'react'
 import { Mail, MapPin, Phone, ArrowRight, CheckCircle } from 'lucide-react'
 
 type FormState = 'idle' | 'sending' | 'sent'
@@ -12,13 +11,7 @@ const reasons = [
 export default function Contact() {
   const [form, setForm] = useState({ firstName: '', lastName: '', email: '', reason: '', message: '' })
   const [formState, setFormState] = useState<FormState>('idle')
-  const { hash } = useLocation()
 
-  useEffect(() => {
-    if (hash === '#contact-form') {
-      document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })
-    }
-  }, [hash])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -79,7 +72,7 @@ export default function Contact() {
       </section>
 
       {/* Content */}
-      <section id="contact-form" className="bg-white py-16 pb-32">
+      <section className="bg-white py-16 pb-32">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
             {/* Info */}
