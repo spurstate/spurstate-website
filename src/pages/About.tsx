@@ -53,7 +53,7 @@ export default function About() {
           <div className="max-w-3xl">
             <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-4">Our mission</p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-950 leading-tight tracking-tight mb-6">
-              Spurstate helps New Zealand businesses<br className="hidden sm:block" />move faster with AI —<br />
+              Spurstate helps New Zealand businesses<br className="hidden sm:block" /> move faster with AI —<br />
               <span className="text-blue-600">starting from where they are.</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
