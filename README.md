@@ -62,4 +62,3 @@ npm run preview
 - [React Router v6](https://reactrouter.com)
 - [Lucide React](https://lucide.dev) (icons)
 - [Vite](https://vitejs.dev)
-
